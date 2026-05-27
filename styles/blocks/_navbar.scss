@@ -1,0 +1,76 @@
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9100;
+  display: flex; align-items: center; gap: 2rem;
+  padding: 1.2rem 2.5rem;
+  transition: background var(--trans), box-shadow var(--trans), padding var(--trans);
+}
+#navbar.scrolled,
+#navbar.menu-open {
+  background: rgba(6,6,11,0.97);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  box-shadow: 0 1px 0 var(--border), 0 8px 32px rgba(0,0,0,0.4);
+  padding: 0.85rem 2.5rem;
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600;
+  white-space: nowrap; margin-right: auto;
+}
+.nav-logo em { font-style: italic; color: var(--gold); }
+
+.nav-links {
+  display: flex; list-style: none; gap: 0.25rem;
+}
+.nav-links a {
+  position: relative; display: block;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.88rem; font-weight: 500; color: var(--text2);
+  transition: color var(--trans);
+  overflow: hidden;
+}
+.nav-links a::after {
+  content: attr(data-text);
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 0.4rem 0.85rem;
+  color: var(--gold);
+  transform: translateY(100%);
+  transition: transform var(--trans);
+}
+.nav-links a:hover { color: transparent; }
+.nav-links a:hover::after { transform: translateY(0); }
+.nav-links a.active { color: var(--text); }
+
+.nav-cta {
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+  color: var(--gold);
+  transition: background var(--trans), color var(--trans);
+}
+.nav-cta:hover { background: var(--gold); color: var(--bg); }
+
+.nav-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 798;
+}
+.nav-overlay.open { display: block; }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  width: 28px; padding: 4px 0;
+  position: relative; z-index: 9999;
+}
+.hamburger span {
+  display: block; height: 2px;
+  background: var(--text); border-radius: 2px;
+  transition: transform var(--trans), opacity var(--trans), width var(--trans);
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }

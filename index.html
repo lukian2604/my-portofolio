@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luchian Razvon — Developer & Designer</title>
+    <link rel="icon" type="image/svg+xml" href="icons/Icon.svg" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+        <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+        <div class="scroll-bar" id="scrollBar"></div>
+
+        <div class="nav-overlay" id="navOverlay"></div>
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">
+        <img src="icons/Icon.svg" alt="LR" width="32" height="32" />
+        <span>Luchian<em>Razvon</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-text="About">About</a></li>
+        <li><a href="#skills" data-text="Skills">Skills</a></li>
+        <li><a href="#portfolio" data-text="Work">Work</a></li>
+        <li><a href="#services" data-text="Services">Services</a></li>
+        <li><a href="#contact" data-text="Contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+        <section id="hero">
+      <canvas id="particleCanvas"></canvas>
+
+      <div class="aurora">
+        <div class="aurora-blob a1"></div>
+        <div class="aurora-blob a2"></div>
+        <div class="aurora-blob a3"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-tag">
+            <span class="dot"></span>
+            Available for work
+          </div>
+          <h1 class="hero-name">
+            <span class="line-reveal">Luchian</span>
+            <span class="line-reveal italic">Razvon</span>
+          </h1>
+          <div class="hero-role">
+            <span class="role-prefix">I build</span>
+            <span class="typewriter" id="typewriter"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+          <p class="hero-bio">
+            Full-stack developer & UI designer crafting digital experiences that
+            are fast, beautiful, and built to last.
+          </p>
+          <div class="hero-ctas">
+            <a href="#portfolio" class="btn-primary magnetic">
+              <span>View My Work</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+            <a href="#contact" class="btn-ghost magnetic">
+              <span>Let's Talk</span>
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a
+              href="https://github.com/lukian2604"
+              class="social-link"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/lukian2604?igsh=dXNjZGY4aGlhZWNl&utm_source=qr"
+              class="social-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://it.fiverr.com/lukian_2604?public_mode=true"
+              class="social-link"
+              aria-label="Fiverr"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.703-2.505 2.45-2.505 1.856 0 2.471 1.384 2.471 2.408 0 .224-.01.37-.02.477zm-1.562-.945c-.04-.42-.342-.81-.889-.81-.508 0-.81.225-.908.81h1.797zM7.508 15.44h1.416l1.767-4.874h-1.62l-.86 2.837-.878-2.837H5.72l1.787 4.874zm-6.6 0H2.51v-3.558h1.524v3.558h1.591v-4.874H2.51v-.302c0-.332.235-.536.606-.536h.918V8.412H2.85c-1.162 0-1.943.712-1.943 1.755v.4H0v1.316h.908v3.558z"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:lukian.ceres26@gmail.com"
+              class="social-link"
+              aria-label="Email"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <div class="frame-ring r1"></div>
+            <div class="frame-ring r2"></div>
+            <div class="frame-ring r3"></div>
+            <div class="photo-glow"></div>
+            <img src="./images/2.png" alt="Luchian Razvon" class="hero-photo" />
+            <div class="badge badge-exp">
+              <span class="badge-num">2+</span>
+              <span class="badge-label">Years<br />Experience</span>
+            </div>
+            <div class="badge badge-proj">
+              <span class="badge-num">9+</span>
+              <span class="badge-label">Projects<br />Delivered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+        <section id="about" class="section">
+      <div class="container">
+        <div class="section-label reveal">About Me</div>
+        <div class="about-grid">
+          <div class="about-image-wrap reveal">
+            <img
+              src="./images/1.png"
+              alt="Luchian Razvon"
+              class="about-photo"
+            />
+            <div class="about-img-deco"></div>
+            <div class="exp-card reveal-delay">
+              <span class="exp-icon">✦</span>
+              <strong>2+ Years</strong>
+              <span>in web development</span>
+            </div>
+          </div>
+          <div class="about-content">
+            <h2 class="section-title reveal">
+              Passionate about<br /><em>craft & detail</em>
+            </h2>
+            <p class="about-text reveal">
+              I'm a full-stack developer based in Romania with a strong focus on
+              creating intuitive, high-performance digital products. I blend
+              technical precision with design sensibility to deliver experiences
+              that look great and work even better.
+            </p>
+            <p class="about-text reveal">
+              When I'm not coding, you'll find me exploring UI design trends,
+              tinkering with side projects, or leveling up my skills in the
+              ever-evolving tech landscape.
+            </p>
+            <div class="about-stats reveal">
+              <div class="stat">
+                <span class="stat-num" data-target="9">0</span><span>+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">...</span>
+                <span class="stat-label">Clients</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num" data-target="2">0</span><span>+</span>
+                <span class="stat-label">Years</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn-primary magnetic reveal">
+              <span>Work Together</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="skills" class="section section-dark">
+      <div class="container">
+        <div class="section-label reveal">Expertise</div>
+        <h2 class="section-title centered reveal">
+          Skills &amp; <em>Technologies</em>
+        </h2>
+        <p class="section-sub centered reveal">
+          Technologies I use to bring ideas to life
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <h3 class="cat-title"><span class="cat-icon">◈</span> Frontend</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>HTML &amp; CSS</span><span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="95"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>JavaScript</span><span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>React / Next.js</span
+                  ><span class="learning-label"
+                    >Learning<span class="dot d1">.</span
+                    ><span class="dot d2">.</span
+                    ><span class="dot d3">.</span></span
+                  >
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill skill-fill--learning"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>React Native</span
+                  ><span class="learning-label"
+                    >Learning<span class="dot d1">.</span
+                    ><span class="dot d2">.</span
+                    ><span class="dot d3">.</span></span
+                  >
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill skill-fill--learning"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>TypeScript</span
+                  ><span class="learning-label"
+                    >Learning<span class="dot d1">.</span
+                    ><span class="dot d2">.</span
+                    ><span class="dot d3">.</span></span
+                  >
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill skill-fill--learning"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="cat-title"><span class="cat-icon">◈</span> Backend</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Node.js</span><span>40%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="40"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Python</span><span>40%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="40"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span>Java</span><span>55%</span></div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="55"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>PostgreSQL</span
+                  ><span class="learning-label"
+                    >Learning<span class="dot d1">.</span
+                    ><span class="dot d2">.</span
+                    ><span class="dot d3">.</span></span
+                  >
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill skill-fill--learning"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>MongoDB</span
+                  ><span class="learning-label"
+                    >Learning<span class="dot d1">.</span
+                    ><span class="dot d2">.</span
+                    ><span class="dot d3">.</span></span
+                  >
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill skill-fill--learning"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>REST &amp; GraphQL</span
+                  ><span class="learning-label"
+                    >Learning<span class="dot d1">.</span
+                    ><span class="dot d2">.</span
+                    ><span class="dot d3">.</span></span
+                  >
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill skill-fill--learning"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal skill-cat-learning">
+            <div class="skill-cat-overlay">
+              <span
+                >Learning<span class="dot d1">.</span
+                ><span class="dot d2">.</span
+                ><span class="dot d3">.</span></span
+              >
+            </div>
+            <h3 class="cat-title">
+              <span class="cat-icon">◈</span> Design &amp; Tools
+            </h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-meta"><span>Figma</span><span>90%</span></div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>UI/UX Design</span><span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Git &amp; DevOps</span><span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>AWS / Vercel</span><span>70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal skill-cat-learning">
+            <div class="skill-cat-overlay">
+              <span
+                >Learning<span class="dot d1">.</span
+                ><span class="dot d2">.</span
+                ><span class="dot d3">.</span></span
+              >
+            </div>
+            <h3 class="cat-title">
+              <span class="cat-icon">◈</span> AI &amp; Productivity
+            </h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Claude Code</span><span>92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="92"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Google Gemini</span><span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Obsidian</span><span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-width="88"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-tags reveal">
+          <span class="tag">React</span><span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span><span class="tag">Node.js</span>
+          <span class="tag">Python</span><span class="tag">Java</span>
+          <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span>
+          <span class="tag">Figma</span><span class="tag">Tailwind CSS</span>
+          <span class="tag">GraphQL</span><span class="tag">Docker</span>
+          <span class="tag">AWS</span><span class="tag">Claude Code</span>
+          <span class="tag">Google Gemini</span
+          ><span class="tag">Obsidian</span>
+        </div>
+      </div>
+    </section>
+
+        <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-label reveal">Selected Work</div>
+        <h2 class="section-title reveal">My <em>Projects</em></h2>
+        <p class="section-sub reveal">A curated selection of my best work</p>
+
+        <div class="portfolio-filters reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="landing">
+            Landing Pages
+          </button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="ui">UI/UX</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="bot">Chatbots</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+                    <article class="project-card reveal" data-cat="landing">
+            <div class="project-img-wrap">
+              <div class="project-mock" style="--c1: #0d0000; --c2: #5a0000">
+                <div class="mock-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-hero-ui"></div>
+                  <div class="mock-line w80"></div>
+                  <div class="mock-line w60"></div>
+                  <div class="mock-btn-row">
+                    <div class="mock-btn"></div>
+                    <div class="mock-btn outline"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://lukian2604.github.io/kropp-fitness/"
+                  class="project-link"
+                  aria-label="Live demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/lukian2604/kropp-fitness"
+                  class="project-link"
+                  aria-label="View code"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+              <h3 class="project-title">Kropp Fitness Club</h3>
+              <p class="project-desc">
+                Fitness club landing page with CrossFit classes, BMI calculator,
+                event booking and trainer profiles.
+              </p>
+            </div>
+          </article>
+
+                    <article class="project-card reveal" data-cat="landing">
+            <div class="project-img-wrap">
+              <div class="project-mock" style="--c1: #050810; --c2: #0d1a40">
+                <div class="mock-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-line w90"></div>
+                  <div class="mock-grid">
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://lukian2604.github.io/future-tech"
+                  class="project-link"
+                  aria-label="Live demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/lukian2604/future-tech"
+                  class="project-link"
+                  aria-label="View code"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>HTML</span><span>SCSS</span><span>JavaScript</span>
+              </div>
+              <h3 class="project-title">Future Tech — AI News Platform</h3>
+              <p class="project-desc">
+                Multi-page AI news and resources website with dark theme, yellow
+                accents, podcast section and vanilla JS modules.
+              </p>
+            </div>
+          </article>
+
+                    <article class="project-card reveal" data-cat="landing">
+            <div class="project-img-wrap">
+              <div class="project-mock" style="--c1: #0a0f00; --c2: #1a2800">
+                <div class="mock-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-line w70"></div>
+                  <div class="mock-line w50"></div>
+                  <div class="mock-grid">
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://lukian2604.github.io/positivus-landing-page/"
+                  class="project-link"
+                  aria-label="Live demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/lukian2604/positivus-landing-page"
+                  class="project-link"
+                  aria-label="View code"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+              <h3 class="project-title">
+                Positivus — Digital Marketing Agency
+              </h3>
+              <p class="project-desc">
+                Digital marketing agency website offering SEO, PPC, social
+                media, email marketing and analytics services.
+              </p>
+            </div>
+          </article>
+
+                    <article class="project-card reveal" data-cat="landing ui">
+            <div class="project-img-wrap">
+              <div class="project-mock" style="--c1: #041208; --c2: #0a3018">
+                <div class="mock-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-hero-ui"></div>
+                  <div class="mock-line w70"></div>
+                  <div class="mock-line w50"></div>
+                  <div class="mock-btn-row">
+                    <div class="mock-btn"></div>
+                    <div class="mock-btn outline"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://lukian2604.github.io/starbucks-landing-page"
+                  class="project-link"
+                  aria-label="Live demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/lukian2604/starbucks-landing-page"
+                  class="project-link"
+                  aria-label="View code"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>HTML</span><span>SCSS</span></div>
+              <h3 class="project-title">Starbucks Landing Page</h3>
+              <p class="project-desc">
+                Responsive coffee brand landing page with dark aesthetic, green
+                gradient accents and a clean modern layout.
+              </p>
+            </div>
+          </article>
+
+                    <article class="project-card reveal" data-cat="landing ui">
+            <div class="project-img-wrap">
+              <div class="project-mock" style="--c1: #0a0603; --c2: #3a2010">
+                <div class="mock-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-hero-ui"></div>
+                  <div class="mock-line w60"></div>
+                  <div class="mock-line w40"></div>
+                  <div class="mock-btn-row"><div class="mock-btn"></div></div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://lukian2604.github.io/tea-landing-page/"
+                  class="project-link"
+                  aria-label="Live demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/lukian2604/tea-landing-page"
+                  class="project-link"
+                  aria-label="View code"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>SCSS</span>
+              </div>
+              <h3 class="project-title">TealuxE — Premium Tea Store</h3>
+              <p class="project-desc">
+                Minimalist landing page for a premium tea brand with editorial
+                sections, collection grid and newsletter signup.
+              </p>
+            </div>
+          </article>
+
+                    <article class="project-card reveal" data-cat="landing ui">
+            <div class="project-img-wrap">
+              <div class="project-mock" style="--c1: #141414; --c2: #2a2a2a">
+                <div class="mock-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-avatar-row">
+                    <div class="mock-avatar"></div>
+                    <div class="mock-avatar"></div>
+                    <div class="mock-avatar"></div>
+                  </div>
+                  <div class="mock-line w70"></div>
+                  <div class="mock-line w50"></div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://lukian2604.github.io/fashion-blog-template/"
+                  class="project-link"
+                  aria-label="Live demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/lukian2604/fashion-blog-template"
+                  class="project-link"
+                  aria-label="View code"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+              <h3 class="project-title">Fashion Blog Template</h3>
+              <p class="project-desc">
+                Editorial fashion and lifestyle blog with multi-category layout,
+                featured posts, sidebar and social media integration.
+              </p>
+            </div>
+          </article>
+
+                    <article class="project-card reveal" data-cat="landing">
+            <div class="project-img-wrap">
+              <div class="project-mock" style="--c1: #1a0800; --c2: #6b2800">
+                <div class="mock-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-line w80"></div>
+                  <div class="mock-grid">
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://lukian2604.github.io/fastfood-landing-page/"
+                  class="project-link"
+                  aria-label="Live demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/lukian2604/fastfood-landing-page"
+                  class="project-link"
+                  aria-label="View code"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>SVG</span>
+              </div>
+              <h3 class="project-title">FastFood Ordering Page</h3>
+              <p class="project-desc">
+                Fast food ordering landing page with orange-accented modern
+                design, brand showcase and responsive layout.
+              </p>
+            </div>
+          </article>
+
+                    <article class="project-card coming-soon reveal" data-cat="web">
+            <div class="coming-soon-inner">
+              <div class="coming-soon-icon">⌨</div>
+              <span>Web App — Coming Soon</span>
+            </div>
+          </article>
+
+                    <article class="project-card coming-soon reveal" data-cat="mobile">
+            <div class="coming-soon-inner">
+              <div class="coming-soon-icon">📱</div>
+              <span>Mobile App — Coming Soon</span>
+            </div>
+          </article>
+
+                    <article class="project-card coming-soon reveal" data-cat="bot">
+            <div class="coming-soon-inner">
+              <div class="coming-soon-icon">🤖</div>
+              <span>Chatbot — Coming Soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <section id="services" class="section section-dark">
+      <div class="container">
+        <div class="section-label reveal">What I Offer</div>
+        <h2 class="section-title centered reveal">
+          Services &amp; <em>Capabilities</em>
+        </h2>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect
+                  x="4"
+                  y="8"
+                  width="40"
+                  height="28"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M16 36l-4 8h24l-4-8"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M12 20l6 6-6 6M22 26h14"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              Full-stack applications built with modern frameworks — fast,
+              scalable, and SEO-optimized from day one.
+            </p>
+            <div class="service-tags">
+              <span>React</span><span>Next.js</span><span>Node</span>
+            </div>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect
+                  x="14"
+                  y="4"
+                  width="20"
+                  height="36"
+                  rx="4"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                />
+                <circle cx="24" cy="36" r="2" fill="currentColor" />
+                <rect
+                  x="19"
+                  y="9"
+                  width="10"
+                  height="2"
+                  rx="1"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <h3>Mobile Development</h3>
+            <p>
+              Cross-platform apps that feel native on iOS and Android, with
+              seamless UX and cloud integration.
+            </p>
+            <div class="service-tags">
+              <span>React Native</span><span>Firebase</span>
+            </div>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="18"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M16 24c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <circle cx="24" cy="24" r="3" fill="currentColor" />
+              </svg>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Pixel-perfect interfaces designed in Figma — wireframes,
+              prototypes, design systems, and handoff-ready specs.
+            </p>
+            <div class="service-tags">
+              <span>Figma</span><span>Prototyping</span>
+            </div>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path
+                  d="M6 24l8-16 8 10 6-6 12 22H6z"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Performance & SEO</h3>
+            <p>
+              Lighthouse audits, Core Web Vitals optimization, and technical SEO
+              to make sure your site ranks and converts.
+            </p>
+            <div class="service-tags">
+              <span>Lighthouse</span><span>Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="contact" class="section">
+      <div class="container">
+        <div class="section-label reveal">Get In Touch</div>
+        <h2 class="section-title centered reveal">
+          Let's Build Something <em>Great</em>
+        </h2>
+        <p class="section-sub centered reveal">
+          Have a project in mind? I'd love to hear about it.
+        </p>
+
+        <div class="contact-wrap">
+          <div class="contact-info reveal">
+            <div class="contact-item">
+              <div class="ci-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,12 2,6" />
+                </svg>
+              </div>
+              <div>
+                <span class="ci-label">Email</span>
+                <a href="mailto:lukian.ceres26@gmail.com" class="ci-value"
+                  >lukian.ceres26@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <span class="ci-label">Location</span>
+                <span class="ci-value">Italy/Rome, EU</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div>
+                <span class="ci-label">Availability</span>
+                <span class="ci-value">Open to opportunities</span>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a
+                href="https://github.com/lukian2604"
+                class="social-pill"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                href="https://www.instagram.com/lukian2604?igsh=dXNjZGY4aGlhZWNl&utm_source=qr"
+                class="social-pill"
+                target="_blank"
+                rel="noopener"
+                >Instagram</a
+              >
+              <a
+                href="https://it.fiverr.com/lukian_2604?public_mode=true"
+                class="social-pill"
+                target="_blank"
+                rel="noopener"
+                >Fiverr</a
+              >
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=" "
+                />
+                <label for="name">Your Name</label>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email">Email Address</label>
+                <div class="form-line"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder=" "
+              />
+              <label for="subject">Subject</label>
+              <div class="form-line"></div>
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder=" "
+              ></textarea>
+              <label for="message">Your Message</label>
+              <div class="form-line"></div>
+            </div>
+            <button type="submit" class="btn-primary magnetic full-width">
+              <span>Send Message</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+        <footer id="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <a href="#hero" class="footer-logo">
+            <img src="icons/Icon.svg" alt="LR" width="28" height="28" />
+            Luchian<em>Razvon</em>
+          </a>
+          <p class="footer-copy">© 2026 Luchian Razvon. All rights reserved.</p>
+          <a href="#hero" class="back-top" aria-label="Back to top">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="18 15 12 9 6 15" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

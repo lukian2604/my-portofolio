@@ -1,0 +1,24 @@
+#footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+}
+.footer-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.footer-logo {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-serif); font-size: 1rem;
+}
+.footer-logo em { font-style: italic; color: var(--gold); }
+.footer-copy { font-size: 0.8rem; color: var(--text3); }
+
+.back-top {
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border); border-radius: 50%;
+  color: var(--text2);
+  transition: border-color var(--trans), color var(--trans), transform 0.25s;
+}
+.back-top:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
+.back-top svg { width: 16px; height: 16px; }
