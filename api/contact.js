@@ -27,6 +27,8 @@ export default async function handler(req, res) {
     return res.status(200).json({ success: true });
   } else {
     const err = await response.json();
+    console.error('Airtable error:', JSON.stringify(err));
+    console.error('Env check - BASE_ID:', !!process.env.AIRTABLE_BASE_ID, 'TABLE:', !!process.env.AIRTABLE_TABLE, 'TOKEN:', !!process.env.AIRTABLE_TOKEN);
     return res.status(500).json({ error: err });
   }
 }
