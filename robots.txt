@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://my-portofolio-sigma-three.vercel.app/sitemap.xml
